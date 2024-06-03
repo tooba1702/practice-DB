@@ -1,0 +1,24 @@
+/*CREATE TABLE students(
+stdId int PRIMARY KEY AUTO_INCREMENT,
+stdName varchar(20),
+stdEamil varchar(50) UNIQUE,
+stdAge int)*/
+-- ALTER TABLE students DROP stdEamil
+-- ALTER TABLE  students ADD stdEmail varchar (25)
+-- ALTER TABLE students ADD stdcity varchar(20)
+
+--                           change data type & attribute name
+-- ALTER TABLE students CHANGE stdName studentName int
+--                           change length
+-- ALTER TABLE students CHANGE studentName stdName  varchar (25)
+--                    insertion into table
+/*INSERT INTO students  (stdName,stdAge,stdcity,stdEmail) VALUES ('ali',20,'karachi','ali@gmail.com'),
+('noor',22,'karachi','noor@gmail.com')*/
+ -- INSERT INTO students (stdName,stdAge,stdcity,stdEmail) VALUES ('ali',20,'lahore','ali@gmail.com'),('noor',22,'lahore','noor@gmail.com')
+--                                    where from ID
+-- UPDATE students SET stdName = 'hamza' , stdEmail = 'hamza@gmail.com' WHERE stdId = 1
+-- 										AND(all conditions must be true)
+-- UPDATE students SET stdName = 'ali' , stdEmail = 'ali@gmail.com' WHERE stdName = 'hamza' AND stdEmail = 'hamza@gmail.com'
+-- 										OR(any one conditions must be true)
+-- UPDATE students SET stdName = 'hamza' , stdEmail = 'hamza@gmail.com' WHERE stdName = 'noor' OR stdEmail = 'ali@gmail.com'
+-- SELECT * FROM students WHERE stdName = 'hamza'  OR stdcity  = 'lahore'
