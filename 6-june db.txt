@@ -1,0 +1,16 @@
+6-june-24
+
+ALTER TABLE employees ADD dept_id int , ADD CONSTRAINT FOREIGN KEY (dept_id) REFERENCES departments(id)
+
+ SELECT SUM(salary) AS 'sum of salaries' FROM employee
+-- SELECT MIN(salary) AS 'minimum salary' FROM employee
+-- SELECT MAX(salary) AS 'maximum salary' FROM employee
+-- SELECT AVG(salary) AS 'average salary' FROM employee
+
+-- 				subquery
+-- SELECT * FROM employee WHERE salary = (SELECT MIN(salary) FROM employee)
+-- SELECT * FROM employee WHERE salary = (SELECT MAX(salary) FROM employee)
+
+		group by
+-- SELECT address from employee GROUP BY (address)
+-- select COUNT(id) , address  FROM employee  GROUP BY(address)

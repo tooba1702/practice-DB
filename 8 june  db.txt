@@ -1,0 +1,31 @@
+8-june
+/*SELECT employees.* , departments.*
+FROM  employees
+INNER JOIN
+departments 
+ON
+employees.dept_id = departments.id*/
+
+SELECT employees.name AS 'employe name', employees.salary , departments.name AS 'department'
+from employees
+INNER JOIN
+departments
+ON
+employees.dept_id = departments.id
+
+
+
+
+---					INNER JOIN
+
+SELECT student.id , student.name, course.name as 'course'
+FROM std_bridge 
+INNER JOIN
+student
+ON
+std_bridge.s_id = student.id
+INNER JOIN
+course
+ON
+std_bridge.c_id = course.id
+
