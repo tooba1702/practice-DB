@@ -1,0 +1,29 @@
+
+/*CREATE TABLE employees(
+id int PRIMARY KEY  AUTO_INCREMENT,
+name varchar (20),
+gender varchar (7),
+address varchar (30),
+salary int)
+
+ALTER TABLE employees ADD designation varchar (20)*/
+-- INSERT INTO employees (name,gender,address,salary,designation) VALUES ('fiza','f','korangi','20,000','intern')
+
+--  Q1: there is an upcoming picnic for women.write a query that  writtens all female staff.
+SELECT * FROM employees WHERE gender = 'f'  
+-- Q2: write a query which  writtens the 3 most earning employees.
+-- SELECT * FROM employees ORDER BY salary DESC LIMIT 3
+
+-- Q3: write a query that writtens the 2 most earning female employees.
+SELECT * FROM  employees WHERE gender = 'female' ORDER  BY salary DESC LIMIT 2
+
+-- Q4: congratulations xyz your company has made a profit ,write a query that increases every employe's salary by 2500.
+-- UPDATE employees salary SET salary =  salary + 2500
+
+-- Q5: a van service has  been started by  the company for female staff,*living in gulshan-e-iqbal 13-e or gulshan e hadid.
+*write  a   query thatwrittens a  result set that meet above requirement
+SELECT  * FROM employees WHERE address = 'gulshan e iqbal 13-e' OR address =  'gulshan e hadid'
+
+-- Q6write  a  query thst increases the salary of all employees by 1000 except employees  from  management.
+UPDATE employees SET salary = salary + 1000 WHERE department != 'management'
+

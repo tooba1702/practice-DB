@@ -1,0 +1,51 @@
+assignment
+Q) -- create a table for person with the following attributes
+-- id, first_name, last_names, gender, date_of_birth
+-- enter 8 rows into the table..
+
+CREATE TABLE persons(
+id int PRIMARY KEY AUTO_INCREMENT,
+first_name varchar(20),
+last_name varchar(20),
+gender ENUM('male','female'),
+D_O_B Date)
+
+Q) 
+-- OopsðŸ˜…. Looks like we forgot to enter a column for the person's age
+-- add a column for age. the age column should default to 0.
+
+ALTER TABLE persons ADD age int DEFAULT '0'
+
+
+Q) -- Retrieve record of all the people who birthdays ðŸŽ‚ are between 5th of march 2009 to 5th march 2019
+  -- the DOB should be in an ascending order.
+
+
+
+
+write a query that returns the average age from the person table.
+	-- NOTE: column in resultset should be properly named!
+SELECT AVG(age) AS 'average age' FROM persons
+
+
+Q) -- write a query that counts the number of male and female in the table.
+-- NOTE: RESULTSET SHOULD BE IN THE FOLLOWING FORMAT.
+-- +------------+------------+
+-- | Gender     | Total      |
+-- +------------+------------+
+-- | Male       | 10         |
+-- | Female     |  7         |
+-- +------------+------------+
+Select COUNT(id) AS'Total' , gender FROM persons  GROUP BY(gender)
+
+
+Q)  -- write a query that returns a head count of the number of employees in each department
+-- and the avg salary of that department
+-- +--------------+------------+-----------------+
+-- | Department   | Head Count | Average Salary  |
+-- +--------------+------------+-----------------+
+-- | Faculty      | 10         | 2000.9          |
+-- | Management   |  7         | 1018.56         |
+-- +--------------+------------+-----------------+
+
+
